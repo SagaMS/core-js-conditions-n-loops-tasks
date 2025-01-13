@@ -230,8 +230,19 @@ function isPalindrome(str) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(/* str, letter */) {
-  throw new Error('Not implemented');
+function getIndexOf(str, letter) {
+  let answer;
+  for (let index = 0; index < str.length; index += 1) {
+    const element = str[index];
+    if (element === letter) {
+      answer = index;
+      break;
+    }
+  }
+  if (answer !== undefined) {
+    return answer;
+  }
+  return -1;
 }
 
 /**
